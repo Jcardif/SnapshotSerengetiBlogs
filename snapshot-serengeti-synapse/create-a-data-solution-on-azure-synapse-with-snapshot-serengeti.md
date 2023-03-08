@@ -28,7 +28,7 @@ After successfully creating the linked service, publish the changes to the works
 
 Now that we have successfully linked to Azure KeyVault we can begin data ingestion, leveraging the Notebooks in synapse to load the data into the storage account. 
 
-## Ingesting the data (or we call the title notebook)
+## Ingesting the data - Synapse Notebooks, Spark and Azure Data Lake Storage Gen2
 Synapse Notebooks are a great way to interact with data in the workspace. They allow you to write code in different languages to interact with data in the workspace. In this case we'll be using C# notebooks to load the data into the storage account.
 
 To begin, navigate to the **Develop** hub and expand the **Notebooks** and you'll find three notebooks, i.e.:
@@ -41,6 +41,15 @@ To begin, open the **copy_zipped_metadata_files** notebook and in the third cell
 Next attach the notebook to a spark pool by clicking on the **Attach to** button at the top of the notebook. Select the `defsparkpool`, next click on the **Run all** button to execute the notebook.
 
 ![](/snapshot-serengeti-synapse/images/copy_zipped_metadata_files.png)
+
+Navigate to the **Data** hub and clicked the **Linked** tab, expand the **Azure Data Lake Storage Gen2** and the AZure Data Lake storage account and you'll see a newly created container called **snapshot-serengeti**. Open the container and inside the `metadata` folder you'll find the extracted metadata files.
+
+![](/snapshot-serengeti-synapse/images/metadata_files.png)
+
+## Loading & Transforming the data - Synapse Notebooks, Spark and SQL Data Warehouse
+Open the **save_json_data_to_sql** notebook and in the fourth cell replace the values of the `vaultName` and `linkConnectionName` variables with the name of the key vault and the linked service name to the key vault respectively.
+
+Attach the notebook to the `defsparkpool` and run the notebook. This will load the data from json files into the SQL data warehouse.
 
 
 
