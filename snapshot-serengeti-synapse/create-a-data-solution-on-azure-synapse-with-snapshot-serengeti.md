@@ -51,8 +51,21 @@ Open the **save_json_data_to_sql** notebook and in the fourth cell replace the v
 
 Attach the notebook to the `defsparkpool` and run the notebook. This will load the data from json files into the SQL data warehouse.
 
+After successful execution, navigate to the **Data** Hub and in the **Workspace** tab expand the **SQL databases** and the **defdedicated** database and inside the **Tables** folder you'll find the tables created from the json files.
 
+![](/snapshot-serengeti-synapse/images/created_tables.png)
 
+Right click on the **defdedicated** database and select **New SQL script** to open the SQL script editor. In the editor, run the following query.
 
+```sql
+        SELECT c.name AS category_name, COUNT(*) AS image_count
+        FROM images i
+        JOIN annotations a ON i.id = a.image_id
+        JOIN categories c ON a.category_id = c.id
+        WHERE c.id NOT IN (0, 1)
+        GROUP BY c.name
+```
 
+This query gets the number of animals in each category excluding the empty and human categories. 
 
+![](/snapshot-serengeti-synapse/images/execute_sql_query.png)
