@@ -24,6 +24,26 @@ Click on **New** and search for **Key Vault**. Select the **Key Vault** option a
 
 ![](/snapshot-serengeti-synapse//images/vault_linked_service.png)
 
+After successfully creating the linked service, publish the changes to the workspace by clicking on the **Publish** button at the top of the workspace.
+
+Now that we have successfully linked to Azure KeyVault we can begin data ingestion, leveraging the Notebooks in synapse to load the data into the storage account. 
+
+## Ingesting the data (or we call the title notebook)
+Synapse Notebooks are a great way to interact with data in the workspace. They allow you to write code in different languages to interact with data in the workspace. In this case we'll be using C# notebooks to load the data into the storage account.
+
+To begin, navigate to the **Develop** hub and expand the **Notebooks** and you'll find three notebooks, i.e.:
+1. copy_zipped_metadata_files - this notebook downloads and extracts the metadata files from the Snapshot Serengeti dataset into the storage account.
+2. save_json_data_to_sql - this notebook loads the json files into the SQL data warehouse.
+3. download_and_resize_images - this notebook performs image transformation before using the image data for training the ML model. 
+
+To begin, open the **copy_zipped_metadata_files** notebook and in the third cell replace the values of the `vaultName` and `linkConnectionName` variables with the name of the key vault and the linked service name to the key vault respectively.
+
+Next attach the notebook to a spark pool by clicking on the **Attach to** button at the top of the notebook. Select the `defsparkpool`, next click on the **Run all** button to execute the notebook.
+
+![](/snapshot-serengeti-synapse/images/copy_zipped_metadata_files.png)
+
+
+
 
 
 
