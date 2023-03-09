@@ -32,7 +32,12 @@ Synapse studio is divided into Activity Hubs, which organize the tasks needed fo
 ## Managing workspace configurations & Linked Services
 Navigate to the **Manage** hub. This hub allows you to manage SQL Pools, Apache Spark Pools and Linked Services as well as manage workspace configurations and access. 
 
-SQL Pools
+SQL Pools are fully managed SQL Server instances that can be used to run SQL scripts and queries. Apache Spark Pools on the other hand provide big data compute capabilities in the workspace. Both of these are key components aof a big data solution where the SQL Pools provide the data warehousing component and the Spark Pools provide the compute capabilities.
+
+Navigate to the **External connections** section, and click on **Linked services**. This opens a list of the linked SErvices in the workspace.  By default you there are two linked services to:
+1. Azure Data Lake Storage Gen 2
+2. Dedicated SQL Data warehouse 
+
 
 
 Navigate to the **Manage** hub to create a new **Linked Service**. Linked services in Synapse are used to connect to external resources. In this case we'll be linking Azure Key Vault to the Synapse workspace. This will allow us to retrieve stored credentials from the key vault.
