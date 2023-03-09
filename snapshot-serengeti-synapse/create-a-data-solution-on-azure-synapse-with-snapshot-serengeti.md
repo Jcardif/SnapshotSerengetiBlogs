@@ -32,15 +32,15 @@ Synapse studio is divided into Activity Hubs, which organize the tasks needed fo
 ## Managing workspace configurations & Linked Services
 Navigate to the **Manage** hub. This hub allows you to manage SQL Pools, Apache Spark Pools and Linked Services as well as manage workspace configurations and access. 
 
-SQL Pools are fully managed SQL Server instances that can be used to run SQL scripts and queries. Apache Spark Pools on the other hand provide big data compute capabilities in the workspace. Both of these are key components aof a big data solution where the SQL Pools provide the data warehousing component and the Spark Pools provide the compute capabilities.
+SQL Pools are fully managed SQL Server instances that can be used to run SQL scripts and queries. Apache Spark Pools on the other hand provide big data compute capabilities in the workspace. Both of these are key components of a big data solution where the SQL Pools provide the data warehousing component and the Spark Pools provide the compute capabilities.
 
-Navigate to the **External connections** section, and click on **Linked services**. This opens a list of the linked SErvices in the workspace.  By default you there are two linked services to:
-1. Azure Data Lake Storage Gen 2
-2. Dedicated SQL Data warehouse 
+Navigate to the **External connections** section, and click on **Linked services**. This opens a list of the linked Services in the workspace. Linked services in Synapse are used to connect to external resources. 
 
+By default you there are two linked services to the he Dedicated SQL Data warehouse and the Azure Data Lake Storage Gen which provides the storage component for your data solution on azure.
 
+![](/snapshot-serengeti-synapse/images/adls.png)
 
-Navigate to the **Manage** hub to create a new **Linked Service**. Linked services in Synapse are used to connect to external resources. In this case we'll be linking Azure Key Vault to the Synapse workspace. This will allow us to retrieve stored credentials from the key vault.
+Let's create a new **Linked Service**. In this case we'll be linking Azure Key Vault to the Synapse workspace. This will allow us to retrieve stored credentials from the key vault.
 
 Click on **New** and search for **Key Vault**. Select the **Key Vault** option and click on **Continue**. In the dialog that appears, provide a name for the linked service, select your subscription and the key vault name then commit.
 
@@ -95,6 +95,9 @@ This query gets the number of animals in each category excluding the empty and h
 ## Explore the workspace
 
 ## Conclusion
+In this article we explored  how you can leverage Azure Synapse Analytics for your big data solutions, highlighting some the Key components and how you can link to external resources. In the next article we'll explore how we  connect to power bi for data visualization and how we can link to Azure Machine Learning for training and deploying machine learning models.
 
 ## Deploying your own infrastructure?
+If you are lo
+
 
