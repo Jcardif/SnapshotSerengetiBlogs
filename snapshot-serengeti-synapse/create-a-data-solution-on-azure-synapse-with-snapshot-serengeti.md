@@ -29,6 +29,12 @@ Synapse studio is divided into Activity Hubs, which organize the tasks needed fo
 
 ![](/snapshot-serengeti-synapse/images/synapse_studio.png)
 
+## Managing workspace configurations & Linked Services
+Navigate to the **Manage** hub. This hub allows you to manage SQL Pools, Apache Spark Pools and Linked Services as well as manage workspace configurations and access. 
+
+SQL Pools
+
+
 Navigate to the **Manage** hub to create a new **Linked Service**. Linked services in Synapse are used to connect to external resources. In this case we'll be linking Azure Key Vault to the Synapse workspace. This will allow us to retrieve stored credentials from the key vault.
 
 Click on **New** and search for **Key Vault**. Select the **Key Vault** option and click on **Continue**. In the dialog that appears, provide a name for the linked service, select your subscription and the key vault name then commit.
@@ -82,3 +88,8 @@ This query gets the number of animals in each category excluding the empty and h
 ![](/snapshot-serengeti-synapse/images/execute_sql_query.png)
 
 ## Explore the workspace
+
+## Conclusion
+
+## Deploying your own infrastructure?
+
