@@ -92,12 +92,14 @@ This query gets the number of animals in each category excluding the empty and h
 
 ![](/snapshot-serengeti-synapse/images/execute_sql_query.png)
 
-## Explore the workspace
-
 ## Conclusion
 In this article we explored  how you can leverage Azure Synapse Analytics for your big data solutions, highlighting some the Key components and how you can link to external resources. In the next article we'll explore how we  connect to power bi for data visualization and how we can link to Azure Machine Learning for training and deploying machine learning models.
 
 ## Deploying your own infrastructure?
-If you are lo
+To follow along in this demo, you deployed the infrastructure using the ARM template provided in the GitHub repository. Learn how you can use [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/learn-bicep?WT.mc_id=data-89327-jndemenge) to build and deploy your infrastructure as code. 
+
+New to this? [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) can assist you. 
+
+![GitHub Copilot](/snapshot-serengeti-synapse/assets/serengeti-copilot.gif)
 
 
