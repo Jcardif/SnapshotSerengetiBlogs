@@ -15,7 +15,7 @@ The solution described in this article combines a range of Azure Services that w
 
 There are different ways to building this data solution but we'll go with one that allows you to interact with most of the services on Azure synapse. Before proceeding check the set up instructions as explained in this  GitHub repository: https://github.com/Jcardif/serengetidatalab on how to deploy the resources needed for this solution to azure.
 
-Now that you have successfully deployed the resources needed for this solution, the remainder of this article will look at how we load the data into the [storage account](https://azure.microsoft.com/en-gb/free/storage/?WT.mc_id=data-89327-jndemenge), [transform the data](https://learn.microsoft.com/en-US/Azure/synapse-analytics/synapse-notebook-activity?WT.mc_id=data-89327-jndemenge&tabs=classical) and finally visualize it using [Power Bi](https://powerbi.microsoft.com/en-us/getting-started-with-power-bi/?WT.mc_id=data-89327-jndemenge).
+Now that you have successfully deployed the resources needed for this solution, the remainder of this article will look at how we load the data into the [storage account](https://azure.microsoft.com/en-gb/free/storage/?WT.mc_id=data-89327-jndemenge), [transform the data](https://learn.microsoft.com/en-US/Azure/synapse-analytics/synapse-notebook-activity?WT.mc_id=data-89327-jndemenge&tabs=classical) and finally load it into the [SQL Data warehouse](https://learn.microsoft.com/en-us/azure/synapse-analytics/get-started-analyze-sql-pool?WT.mc_id=data-89327-jndemenge).
 
 ## Synapse Analytics Workspace
 From the deployed resource group open the Synapse Workspace resource then click on **Open Synapse Studio**. This will open the Synapse Studio in a new tab. Synapse studio allows you to execute all data tasks with a simple UI and unified environment.
@@ -97,6 +97,15 @@ In this article we explored  how you can leverage Azure Synapse Analytics for yo
 
 In the next article we'll explore how we  connect to power bi for data visualization and how we can link to Azure Machine Learning for training and deploying machine learning models.
 
+## Resources
+For additional resources to get an in-depth understanding of the services discussed in this article take a look at this handy collection of resources:
+
+- Azure Synapse Analytics Blog - https://aka.ms/SynapseBlog/
+- Documentation - http://aka.ms/SynapseDocs
+- Learning paths and modules - https://aka.ms/synapsemodules
+- Azure Synapse YouTube videos - https://aka.ms/SynapseYouTube
+- Microsoft Power bi Community - http://aka.ms/pbicom 
+
 ## Deploying your own infrastructure?
 To follow along in this demo, you deployed the infrastructure using the ARM template provided in the GitHub repository. Learn how you can use [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/learn-bicep?WT.mc_id=data-89327-jndemenge) to build and deploy your infrastructure as code. 
 
@@ -104,4 +113,5 @@ New to this? [GitHub Copilot](https://docs.github.com/en/copilot/quickstart) can
 
 ![GitHub Copilot](/snapshot-serengeti-synapse/assets/serengeti-copilot.gif)
 
-
+## Publish
+published at https://aka.ms/synapseserengeti
