@@ -62,6 +62,45 @@ To achieve this we'll leverage the [New Quick Measures AI](https://learn.microso
 7.	Changed 6A,6B,6C measures to appropriate names accordingly.
 
 ## Creating Charts
+Next we'll create visualizations to explore the variations in animal images from Snapshot Serengeti across different seasons, locations and species.
 
+To learn more about on-object visual, click [here](https://learn.microsoft.com/power-bi/create-reports/power-bi-on-object-interaction?WT.mc_id=data-93739-davidabu)
 
+1.	Click a card visual, click the measure called Images to the visual
+    ![](/card_visual.png)
+    - To access the editing mode, press the + icon next to the card visual.
+    - Select more options from the menu.
+    - You can now edit and interact with the visual.
+2. Add 3 card visuals to display the measures created above:
+    - Number of Trained
+    - Number of Validation
+    - Number of Annotation
+3. Add 2 slicer visuals:
+    - The first one for categories[name] and rename it to Animals
+    -The second one for Annotation[season] and rename it to Season
 
+    ![](/move_visual.png)
+
+4. To show the Annotation count by Animals, use a clustered bar chart.
+    - Select the clustered bar chart option.
+    - On the right data pane, choose Categories[name] and Number of Annotation
+
+    ![](/count_animals.png)
+
+5. To show the Annotation count by Season, use a clustered bar chart.
+    - Select the clustered bar chart option.
+    - On the right data pane, choose Annotation[season] and Number of Annotation
+6. To show the images count by location, use a clustered bar chart.
+    - Select the clustered bar chart option.
+    - On the right data pane, choose images[location] and DAX measure: Images.
+7. To show the images count by season, use a clustered bar chart.
+    - Select the clustered bar chart option.
+    - On the right data pane, choose Annotation[season] and DAX measure: Images.
+8. To compare the Train and Val tables, use a Line and Clustered Column chart.
+    - Select the Line and Clustered Column chart option.
+    - X-axis: name
+    - Column Y-axis: number of train
+    - Line Y axis: Number of Val
+    - Filter it to Top 5 by using the filter pane. See the picture below.
+
+    ![](/comparison.png)
