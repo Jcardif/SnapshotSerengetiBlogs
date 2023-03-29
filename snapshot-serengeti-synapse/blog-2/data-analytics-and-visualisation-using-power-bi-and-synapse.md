@@ -111,3 +111,20 @@ Finally, this results in:
 Now that we have created the Power Bi reports,  publish them to the Power BI service. 
 
 ## Power Bi Linked Services in Azure Synapse Analytics
+Navigate back to the synapse workspace and click on the "Linked Services" option under the "Manage" section.
+
+![](/create-powerbi-linked-service.png)
+
+Now  you can access your Power Bi reports dircetly in Azure Synapse Analytics. To learn more about this see [this article](https://learn.microsoft.com/en-us/azure/synapse-analytics/quickstart-power-bi?WT.mc_id=data-89327-jndemenge)
+
+## Conclusion
+In this article we explored  how you link Power BI to Azure Synapse Analytics to create a data pipeline. We also explored how to create a Power BI report and publish it to the Power BI service. In the next articles we'll explore how link Azure Machine learning Service with Azure Synapse Analytics and train you Ml Models.
+
+## Resources
+For additional resources to get an in-depth understanding of the services discussed in this article take a look at this handy collection of resources:
+
+- Azure Synapse Analytics Blog - https://aka.ms/SynapseBlog/
+- Documentation - http://aka.ms/SynapseDocs
+- Learning paths and modules - https://aka.ms/synapsemodules
+- Azure Synapse YouTube videos - https://aka.ms/SynapseYouTube
+- Microsoft Power bi Community - http://aka.ms/pbicom 

@@ -44,7 +44,7 @@ Let's create a new **Linked Service**. In this case we'll be linking Azure Key V
 
 Click on **New** and search for **Key Vault**. Select the **Key Vault** option and click on **Continue**. In the dialog that appears, provide a name for the linked service, select your subscription and the key vault name then commit.
 
-![](/snapshot-serengeti-synapse//images/vault_linked_service.png)
+![](vault_linked_service.png)
 
 After successfully creating the linked service, publish the changes to the workspace by clicking on the **Publish** button at the top of the workspace.
 
