@@ -104,3 +104,10 @@ To learn more about on-object visual, click [here](https://learn.microsoft.com/p
     - Filter it to Top 5 by using the filter pane. See the picture below.
 
     ![](/comparison.png)
+
+Finally, this results in:
+![](/final_rep.png)
+
+Now that we have created the Power Bi reports,  publish them to the Power BI service. 
+
+## Power Bi Linked Services in Azure Synapse Analytics
